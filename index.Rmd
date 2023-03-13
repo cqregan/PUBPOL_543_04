@@ -1,0 +1,39 @@
+---
+title: "Use of Force by Seattle Police Department"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+
+
+Column {data-width=450}
+-----------------------------------------------------------------------
+
+### Use of Force Over Time
+
+```{r}
+readRDS("ForceTime.rds")
+```
+
+
+[comment]: this column is wider
+
+Column {data-width=550}
+-----------------------------------------------------------------------
+
+### Use of Force by Precinct
+
+```{r}
+readRDS("ForceFreq.rds")
+```
+
+### Use of Force by Police Beat
+
+```{r}
+readRDS("IncidentBeats.rds")
+```
